@@ -31,19 +31,22 @@ class LoginScreen extends StatelessWidget {
                   etAddress: address,
                 ),
                 FooterWidget(
-                    onPressedLogin: () {
-                      if (formKey.currentState!.validate()) {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeScreen()),
-                            (route) => false);
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text("Login Berhasil"),
-                        ));
-                      }
-                    },
-                    onPressedRegister: () {})
+                  onPressedLogin: () {
+                    if (formKey.currentState!.validate()) {
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeScreen(
+                                    nama: name.text,
+                                    number: number.text,
+                                  )),
+                          (route) => false);
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("Login Berhasil"),
+                      ));
+                    }
+                  },
+                )
               ],
             ),
           ),
