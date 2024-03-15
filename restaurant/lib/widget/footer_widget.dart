@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FooterWidget extends StatelessWidget {
-  const FooterWidget({super.key, required this.onPressedLogin, required this.onPressedRegister});
+  const FooterWidget({super.key, required this.onPressedLogin});
 
   final VoidCallback onPressedLogin;
-  final VoidCallback onPressedRegister;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -24,3 +24,4 @@ class FooterWidget extends StatelessWidget {
     );
   }
 }
+

@@ -30,7 +30,6 @@ class _FormWidgetState extends State<FormWidget> {
             TextFormField(
               keyboardType: TextInputType.name,
               controller: widget.etName,
-              autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                   labelText: "Nama",
                   hintText: "Masukkan Nama",
